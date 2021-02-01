@@ -9,7 +9,7 @@ const { O_DIRECTORY } = require("constants");
 const app = express();
 const port = 3000;
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 
@@ -71,9 +71,3 @@ app.post("/failure", function(req,res){
 app.listen(process.env.PORT || port, function(){
     console.log("server is running on port " + port);
 });
-
-// API KEY
-// 860a00576df2b99e0375367c849a7305-us7
-
-// LIST ID
-// 841d1631ca
