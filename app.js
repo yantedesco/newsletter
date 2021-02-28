@@ -1,10 +1,10 @@
 //jshint esversion: 6
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
 
-require('dotenv').config();
 
 
 const { send } = require("process");
@@ -42,7 +42,7 @@ app.post("/", function(req, res){
 
     const jsonData = JSON.stringify(data);
 
-    const url = "https://us7.api.mailchimp.com/3.0/lists/841d1631ca";
+    const url = "https://usx.api.mailchimp.com/3.0/lists/841d1631ca";
 
     const myKey = process.env.AUTH_TOKEN;
 
